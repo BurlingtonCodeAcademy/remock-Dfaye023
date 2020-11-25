@@ -1,0 +1,113 @@
+/* Blog Post Style Page */
+body {
+  background-color: linen;
+}
+
+.header {
+  text-align: center;
+  font-size: x-large;
+  padding-bottom: 15vh;
+  border-bottom: 10px double lightslategrey;
+}
+
+
+/* container set to grid display to better arrange the main content and sidebar next to each other */
+.container {
+  text-align: center;
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: minmax(50%, 40%) 1fr;
+}
+
+#content-1 {
+  text-align: justify;
+}
+
+#sidebar {
+  text-align: justify;
+  padding-right: 20px;
+}
+/* double solid border under each post in sidebar */
+#sbar {
+  border-bottom: 5px double lightslategray;
+}
+/* setting sidebar images to float left so justified text wraps around */
+#sbar-img {
+  float: left;
+  padding: 8px;
+}
+
+p {
+  font-size: 15px;
+  width: 90%;
+  padding-bottom: 30px;
+}
+/* different styles for different sized headers */
+h3 {
+  text-transform: uppercase;
+}
+
+h4 {
+  text-transform: capitalize;
+  font-style: oblique;
+}
+
+h2 {
+  text-align: center;
+}
+/* styled footer for every page */
+.footer {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  border-top: 10px grey groove;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* styled form so each input field lines up */
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  height: 200px;
+  width: 250px;
+  margin-left: 375px;
+  margin-top: 10px;
+}
+
+#textarea {
+  height: 100px;
+  width: 245px;
+}
+/* set social icons to flex display to align in column */
+#social {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+i {
+  padding: 10px;
+  width: 500px;
+}
+/* styled buttons that chage when hovered over */
+#button {
+  border: 5px grey groove;
+  align-content: center;
+  color: black;
+  background-color: rgba(103, 69, 255, 0.357);
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 40px;
+}
+#button:hover {
+  color: blue;
+}
+a {
+  color: black;
+}
+a:hover {
+  color: blue;
+}

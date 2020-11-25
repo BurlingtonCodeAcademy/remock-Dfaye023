@@ -1,0 +1,94 @@
+/* Learn More Style Page */
+body {
+  background-color: linen;
+}
+/* styled clickable header */
+.header {
+  text-align: center;
+  font-size: x-large;
+  padding-bottom: 10vh;
+  border-bottom: 10px double lightslategrey;
+}
+
+#content-1 {
+  text-align: justify;
+}
+/* styled large picture and it's accompanying header to make it center */
+#photo {
+  text-align: center;
+}
+/* styled p tags */
+p {
+  font-size: 15px;
+  width: 90%;
+  padding-bottom: 30px;
+}
+/* styled for different sized headers */
+h3 {
+  text-transform: uppercase;
+}
+
+h4 {
+  text-transform: capitalize;
+  font-style: oblique;
+}
+
+h2 {
+  text-align: center;
+}
+/* styled fotter for every page */
+.footer {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  border-top: 10px grey groove;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* styled for every input field to lineup fields  */
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  height: 200px;
+  width: 250px;
+  margin-left: 375px;
+  margin-top: 10px;
+}
+/* text area for message input field */
+#textarea {
+  height: 100px;
+  width: 245px;
+}
+/* social icons displayed in a column */
+#social {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+/* styles for individual social icon lines */
+i {
+  padding: 10px;
+  width: 500px;
+}
+/* styled buttons that change when hovered over */
+#button {
+  border: 5px grey groove;
+  align-content: center;
+  color: black;
+  background-color: rgba(103, 69, 255, 0.357);
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 40px;
+}
+#button:hover {
+  color: blue;
+}
+a {
+  color: black;
+}
+a:hover {
+  color: blue;
+}

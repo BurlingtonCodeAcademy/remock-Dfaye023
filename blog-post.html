@@ -3,42 +3,302 @@
   <head>
     <title>Blog Post</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link href="/style2.css" rel="stylesheet" type="text/css">
-  
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <!-- Link to respective style sheet -->
+    <link href="/blog-post.css" rel="stylesheet" type="text/css" />
+    <!-- Import social icons for footer -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
-  <style>
-    a {color: Black;}
-    a:hover {color: yellow};
-  </style>
-  
   <body>
-    <section id="header"></section>
-    <section id="main"></section>
+    <!-- Header that link to home page from any page -->
+    <div class="header">
+      <a href="/index.html"><h1>Blog Post Page</h1></a>
+      <h5>This is a blog! Kinda</h5>
+    </div>
+    <!-- div container with sidebar and main content with all their respective contents -->
     <div class="container">
-
-      <div class='item header'>
-      <a href="/index.html"><h1>Blogpost</h1></a></div>
-     <div class="item container2"> 
-     <h1>Star Wars Blog</h1> 
-      <div class="image">
-        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwoKCg0KCgoHCA0HBw0HBwcHBw8ICQcNIB0iIiARHx8kKCggJCYxJx8fITEhJSkrLi4vIyszOD8sNylCLisBCgoKDg0ODw8QDysZFRkrLSs3Ny0tNy0tKzcrKystKy0tKysrKysrLSsrKystKystKystKzctKysrKystLSstK//AABEIAJ8BPgMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBAIFBgEAB//EAEsQAAECAwIHDAkDAgMHBQAAAAIAAwEEEiIyBRETQlJicgYhIzFBgYKRobHB8BQzUWFxkqLR4UOy8RVTByRzVGN0wtLi8iY0NWRl/8QAGAEAAwEBAAAAAAAAAAAAAAAAAAECAwT/xAAgEQEBAQEAAgMAAwEAAAAAAAAAAQIRITEDEkETInFR/9oADAMBAAIRAxEAPwD48cLRD0OkolCyKI7C0X0dSG3dKrMpNWE4xqbLSsoolTaK7c7OTmSwRtENV9HKNVOpfRDEebHJ1VXPPUuBd+sD886i0eln0/KixapsjxHcDQ93n2JhKDgkO39BcW+u0VWqeghxpIarhX+vegjDGpvWz0AZq7+8PFGC9Tr5nh9kC7SWadg8/wByNd2a6+tMGGjEhISz+gqDCUsQvkQ3bJ9avAjpXdPOUYy4uODUKir9ublcAuYRm/RxsDkCfM6KxDFDHvq+Hca5/tAAOxGrqxq2/wAMpgZeees2X5F5nsvK5mCVZzLGe92XwzQ7h5cqapl7XoYAPurqTwdLYKaIZduuu+Z23T+MfYig/aTD52VUkjO6t9qwsIFmtsh0ElM7rRZcydQOln0XQ+MUvupnil5akWwA37APheAeXF55Vg2CIiqqoEM/w+KnWvyLxiXzX0p3DlQi44yBifxAg60zKTElMXXgAtAzgHevmEzPlTTUdKSyxEpzrU9q1nN9eH2E4yo3S9ILUOsUT+pOU0iIAK+RMPFmlQXydqvMH4cmWbJFlR0H7Zc0eNX9kX430D097SXoTz2kqrBU43NjU2QAYX2TsEHv98FZDKl/cD51XUWcMN4Se1EVs2ZlykqwPUSbktk7RFXsKTE5kfVs9M0EO8Eu2VNRmSGDrY/p/OoZYXCtM/ImIyzOl9aOhP8AqTmooRmhIrTYGgREc1sz6aYYMR/ToL50wcjkxEaRoL9i8AleUJchqqcu/vTL0+JWW20EUdcR8Dl/nZciu+nNfuggzkq4y7k3hNoqBOg9GPEjSllxr/Xb74IC53cQxYQAtOSCHbFZ1yC1O7wP83LlpypB1R/KzJwU59Kvsv8AqCpU2lwoWhRIQQESghFBHKCESA+LEXBj55uxDb+nXUTKoRHQ8YowDZLzyRgoaghG0jQhSXm753kFu8Qo92kvk5kGnAbVrPsIzsbWrmdSFC1Rt0dvKmHhtWtvow4/smHmQEvNoMf5j2QQWIkLmT8/x90SVCovIceKMPFcMSIrNi2VGzjjjHz7UgYbLNzaLmajQhZpLMudfnrQAC0VOnXRnB7k0FJCOuFvULf+0Yph0bN35ERq9UO3b8EEI9Pzye78JiEM65ppWHFpgWZKVmxeHWYfDVjvR78a1TjlodhZORbIrQ2xot92PxV66eTyWwjKPkMFG0mYHU2lS0krhSeKUknnhvMhY2oxxeKvrORlt2s22L4s+tIAroP38SzTrlI0jR0LFpQmX3HC9IeI3TeerMzt2Us4Szbepx0oroqIErGQlCeIRGhI5Ooy0NJPBT0VfSWABGnKEFKfmNyzLg1NuGBJ9afx1m5R0m3KhKggtgtnKOE42LlN8ECU3LNi2QkVZH9BJjB8SbbyegZB1byeaz+XHIaYJwSvUDro0y8RerIKUKgaaiG1tocR1VbF2LbxaahES2OmiQecXBgRFdQEmWivZRNVoUF6MUENFxTlz4QS0DHsik4Rq2Uy3dTJq93H/wAkGvJB3xVHCKvd3EapuXLTwcPfFUOaSM+hWq3eQtSjmmDnh91lygtNuwjFyTweemzv88Bj4LNRSz6O+yx5qLBDcuqYoJ4lGlTiuRQHwYYfsTbdkRHOP88fMlmBtJiMS9Z0+xZt3CG1t/Rij38S9eHz7VEoWRLQvqcOEbHM/GJMJQjZHUO2nYjVSQ7Hf90nGFJCOba78aPKvFa0tDWQDRQpsjdrE+zwglXBLKEOhT0x3sfNvph31Y05gW+1DqqpIdjt/KYTZjeK3crDs3vimgiNrXt7BccOaMIxSbJ0laumH0w38fYjwhSVq6+BBX49yDFoFurUuc/vUwiXyVdy44NXTAa9qGcpslatXgvpHxa4EmRbcpcun/Ku56mxn2EpgXBAzbZkN5lhx+jTKHJ7o+yKC2ZXSrpuBzKmelxLXVmd3k4TbASzZUelVPv64wxQhDr7lpZWHBisXu/mWSm2hbKs2ZUgfDNbxxhGEPj94JUse2VbhFyzCi5vkd0PO8ovtE2VJUHrgdYn8E1IANdJfreEYR7sa9MhaKqjoLPvlvM9z0tLNE4VlaTA0uTZDUq3BDXCK+clXhGpkUWrxnx1pZaNQptsxG6S+fRmZsipp+u1V7MUd9XOBAn3HMmVdOudaL1pK2TDmsuG1whWc/v31kAwjNuTZMttvAIHRYvHv4uXuW3DB7g0t1GZUdLnVYlYfPqc4UJrbXhhSrD+mv6JqBSD2itHMRiNSlAaUeMq4OavRbpSAGJBjGotVFOFWyhwhaQSdKYaul0kGCYagmGo3W2hwe5p4Mh3Q+6o81Xm6b/2mCi//Oo6hFUooyK0m6IqsEYPc1Gw+n8LORWiwvGrAEkWg8IdUCh4LOpZFLuQsrsIWhXXLpLwZuwmHorq8UKl7GgnwuXCpSKNqkrtpeYjSJIcLQ/X2/hZtxCjaIS1uziU2bpa4eP4igXqvkr886YloVDTp1B1Rx90EB54bQdLt8xU2ipKodvb4/svOWqtS5s765CF3RCpMHnbplfzw5sf3QpaA5Ms8g8fMF4HiHX/ADxrkLLhaJ/tjxY0GkI3arwVffuj2o9NkqfPEo3is6BdkPsitesIfPLHvS6cEaOrJEOwmIQtF55caUa9UI5t/tTww+vwxfdTdLkX25yfclHCcGwLzDkqee1TGF2PnjRZxoSmdV/hw1HOXu7VWyT+TqG+L7FFHcnydyjYFnB57k5pOs/qzwdCyPRXyvCsHCdeJwrYTTlelVVFfTQmMiwbw28gwRgGtCEd5fJ33XHHIuEVZmdZ6VUd9OozOBuCTYwzbda0+G8EsyjUo4M1lnZ2VE8IyW8TuD3cUI8cN6MI497l41mXCIhpVs02WQESrqABsefdFTa0z7dk4UlZ01pMGTVN5UTULKclaqryl0YaczlxHKEIWEeQd4QCIaBO5xLOBPS/q3HgDMt3e3jU5KWZJ0SGarGu4c1HxTlV4bSSlmSnQ4MKzmmwr+MYcvOvpH9Kby9MoycvYrOdPhWDH2Q3+NZPcBggirwqQ+kDKuEEizey5Q3onzQ3oe/4L6PKMi2Fmu3boM6snj5ILSXkcXzWa1yK4sHt1ZMnma79FEKupVeE8GvNjUy3li0Mgr91vJ43jHLGFzIBQdPs40EsJskMMoXo5GFwztdiqWsGQekiERJ4skWhRQqyclRFs6dAlp5h1kXSc9JA68w+FEPgqvCU02TR0uM3CuB7lQlZUgKoUEocIim4VPyoZRtCpNIophhLUESaY5fPImTR4chVgzBZf7kw7vsqkYK2wpCrAuDy0Jp0O0vsqkUQVo5iFW5xrUmi/cUPFZyF1aJu1udd/wBzO/8AND7rOjdglBQizvPIotxuohXiQm4XUwnArRIcXNWpSiNpeo0kB8GiX/miwKySBGK8BWlk3FjdFNysflC/z7ySzk005Z88mJMCEN/6FLHZHSr8Ib3f1Iht2h0b/VGCBXf27HOgQaF6ktAfGMV4C4Qvk6orkYcJlM2j6vPepj6wdf8AEd/rS6fBmIiWpY8PPWptRtFVeURG0WipNwsmXnj89am1UhiXhZp0/GMfsjy8ODEtrwQGrNJaFPZBEZKloekfVigs7WkOhGyPzpuVetEPnfSAWREh878URtyl8dcB7VPVc/GjlBIhqbGv++wsthvcpMk4RSghMAdwK4A7K+6OPFvK4k5xxlwhuDX9KtYTFVpb511hrP1YWU3KTZFimB9FDPOJgbnNCEY7/vimMMyYsuC8NdNdBh8d7zFauZjUNOadSrpllwqc+7tce/jRYU0yzeUEvVvU7CeZEr1J0qyhAhKnKfs+yM3Es4g6eJLjWbJ+gk9doMebthHeirvc3ubyz9RCAUBf7OPkRcG4JZcK68H+gdAh141rZBhuXaMW9C+Z2jL3pyHv5pzwspWWmJakZd4JewIADFgaYJh6dwi2NqbM+pcki9IaGoqDAL6Snm5qXKouFHMeC7z+xayyuG9TdwpN50w986r5h95wrVbpa5p+EqWSB4rz4F2RjBCEbR9FOiEIg8X6aG4y9aqouK7gCWmQ+sC7kjZ2FqodQUMhpp88iMI2i2BQ3c1ATFGZvIMIorUbSCaWbhVuflS0MKOB11qoGKtXI/8Ap2BEXqMLl3R+6yeEcKEyP+XHKl9PPFHeKmbfTcYPtYBmx0J4T7Qis2LzYiNRAG2cFhJ/dhhxlp2WF45dmatvgDAW+eMIx5OSKyccIvOFwjhulrnWl1X0/wCvs5RtKLMbK+XYN3RTsp6tysf7E1ba5uWHMtRgXdQM0WReEJczuZPHSfXxJ9Tc8amJIcXhQ4CRLuJseMk0vhUBXBgiQha6C5GFKxdHHijZTEvdS0BIkyzBMH24kTZfIpSUmTmVcEfUMEZ93Xxr0sPBq8wG3k5abqzwo7I/fuTK+IzrnqxFFYbzlF+NI62YjS4Utjt+e9Ra046WbqffH+EaXCpstcxDtghuwpqJMM8G0NV4zHz2qLVRGMaqtc/Pf2Ix3Q6XnsiliOmotSx1o7ZVNAXT7UjGZOpsfPnlXCPhGiHMP6cahJleHX8FHHVSOvR3qVLKaKl3KDp/SrLB7ubVsKgF/KN1a9HRxo8vMU3SufynLylZ2NRBqpQOVIiQZKcFwRHyCbgTg1WcwqFvL2ObUspB6RIiIhbAx+rigpykkNQ2aNdPyrpDZLbt56sW7I1ZEDVSDo8uyLY0irEYcHk0mE8Ld6XME0zhKW2EJPyIE2Wr/wAqvAESGkrqpGplsrpJ5icG6jiaLOShE2AtjZYAqAC9vxxqjukewK0Lb9RUiSqsKM8OLma+H1QTlS81Gyq6B5Ru0VypNFEqbKXZbpEqhvmmGdq4RRejVSksOYT9CbBwhCk36DPQRmJpl5oXmyrHbufFTdSNsfFrU7BrQpKYwrk7pBcoTLseDKm8sRhEHGXxFx6w+ZcMGM6PjDjxQ5VGtX8a4+HnnTQQnnnBInheNquutg4mIe/FxKcDGnKNuA6OeebTHShDihrQ4uVJyrnojoNk4DwPhfA40/ldgQsvmTd0wuZu+o/1rznoy/k3hJsm7OveAuUI+/2R5YLC4Vlci6Qj0FsDepvDR+OJUGGTbctZyuI3OqOBVZ1BfSvQi4NoSuKMY0ldUYE5t6ipiucGboJ+XcGl542s9gzyo82Pi5lsITpGMD0l86B8hslYVxI4TeZhESKBjmA7xB8EJsUoihEpmSHCCiNK9Ak/JsETdWmf0wzutJMNVEtrgHA/pBNM/wB+2eozD778epMK+Sl6RHX8I4/CKtyDJ4POzRXNfVGEN7z7ExhCSFt+7kgA3GA2oDj8V7DtLLAs6BudPFCEO/Gq9J71jX41EmcdkBUJORmJl0hZbroCs8zlxIrzRNuUlYIDoo1obyzrSOTF4R10V07QjtGhnac6ag5Gktun7qFAz0bQU+S4k5A+CpHQrDmilZiF3pdv8oglcHZ70A7JQpp6XchTBUjt1H2qTJFSXnjji8ElOuWh1LCUVaelys/Mhsu001bH4UCOlvoV+etKk5e+c9qCODq8kJom3CbLbA1oZTCtkRcEHR+ox932WMYdtVZ35Vi3MWvPmCJeCyX23kpCWmWxyeZ8QIOXlVgzJlTSNdi2sXg3CZS5VDQddgw0/Z1rQy+6YabQ0ba2zvrn18dnpd5JymnJ5WjTx/ZeJpv9SS6YHDlSUrukli9Y8DWudjtjvK3DCbf+0AepnflX1nZYSGXFsqpd4w/+rNBFojH3R5UaBUle6GcjQnJd5whbvAGx/KgcBLUIM9AOyjxVFcsU/fxRpkqm9a+qUJrJkdq1Zvrz2Ecm0ThEFIBWZ3Bp5d9K0cOwtZ1kFXTLtIvFUdLFR9GCSwJuhbm626clRUdZ3THHiqxr0JuXcyreWA67Fg4Hx96rvR9bL6fO8IYRnZ2pksibT52AyHv3vfjgiS0lOyVlseCO/bspGannCcKpsGTYfGsACjixwx4uTkV45ME82FrRWer2OzEk9LaUcqbGorVCWewOy4WUF4wLPCtKNOEI6aIM5TeURpQnMEiyIi24dOhf6vYptNZMdP8AcuvTdQpF+dTSFhWYIRqbI/nWeddIs5MT89VUKrIuK4x3XDguXrS5UvQJNmkY1CiCRJbLEP7FIX0E6A1LuTIkdhv9ifkZEnCGn9lz2x5oKVmNzWCSmXwbp29mHH4r6zucwQLOVeptPmVGo3DHDeS+4/AIykt6RTbmgGgNBvjh590Fp4Ni23ZugHcrkY73+Rg90jHCS42+HwwQBs44Q8FSbrYVOAOmbnaUY+MFscMNWpHKZ802fSxwjFZLdP68G6bLDBPntR/hFVmqGUg42QuNuG0Vq2wcQ5fcgumROVEVZWjM9Mo78Yq5hK5EQ/4UXz58aqACoi2x7YqNemkoDeaWyuvhZAlMBps65UJ+fZFuWDXAT71HFdUzl5dztgEaA1Uio0Vfv71KhDjS1tqtcMqhK/b71aTFlun51W/qCKIKfebqqqu0CHdHwiq+J1dOx0oKwftVaj6q4wpEtQ/C8nBR5Vy8mAfpIddVjR2kaLl3z54kWCVbwmKR27H2TOUeepFuszPMDP8Aj1qnB2oR1wL5oRWmwDARYJwqOGpPo4lPpefK2wO2yzZnZKsrh1nAyDe5PbBWL03Ky7mRlxA2shWAZa1KlDFxRxb0I44b3uiqJuaIhylV8yvnGqni8F2XccFq02F8unvx/CqbLXxSnpPC5NuEWTzyuXd/4xxIs3ujIs02h24H2qkbEbZCXqHyudfiqx6byjlPmr+Efep/inWgPDIkVTZPHp1nWSr8J4SemxyZOGDQUnYz/Z8VWm5TZHpmlycqu3Q+vWS7VfWRZjNUiYjYE2PRaNBuGPl9uOMYxjyqubmiZsiVe2a5B4rqA5lCza9tiHejtPvPQ0xMC4QkVFWxf+PtTozRWbNnnVRkdWj9qZYcs3kW0SrCE0Wb/wBy9XUl4l8unnB+FGJFaHOD60Sn00btI1Kkm52q6njdIrJJYMG1FVmqpZ+lqW+lO8REgwNWE3Bttwhbt0HRWF1Kvy7g1VDnq5pjrFDxr0DJDjFcrVMzECbJRiA5pIKLipggNjuT3MvYTI6XAaaY9e/fL4Qh7fevomD9zEszS22Niu/nU+2PvjGEOrkVJ/h7EWSNu5l5WvpCUYd0YdS+gthZVZiPk1epthZEc0LHUuzEODPYJSFRejZVMlFhxqp2UER9RUZ7O9Dvj2L55usdcKeNtkjqABYsW6yhCG8vomFJgZdt6bcusWA5sffGMeqC+aSGESZf9LcbN0338u+FcLYx5IY+KKitcAxmsIkRDMSzzpHSwZgEQKnk5YwTTMqTbEw4Q2gmm2D1Chvxh2rcYMmZebbObEQMKxPh2YVBihCzGHJGCpJeXymC8pbqnZ4po9nHj8EWKmmW9ELKA3nHY6yxJjDQkRA3nXPPOrNqVEsKBosAT/VjxdsUGebqwkA5oHX2Y1HPC5rzFJNs5N0hHMAVxtv5UTCfr3dKsQ7II0s3wZFoHQG1FRzyuXwJgdplyZyc1cfYcZ0BByMIxHHzwgqzCWDxl5khG6FzUWo3L4Hcn/ShbvyrDmEAPWDfh1pDdCIk6DlVkwHtj+VfP6p+39lE2XCEOmkpkSyh6/7laTLGTd6CrpqNqrXWfPKyGJdjGyOwikFV1KORtK4R2UAniBvpmegMOPz71pAmG7IiOoAAqbAo0jrH9Aq2aCnhBosZmcs9e22J4WUG8m2I3yD9yPSQtCJeSjvpGE+2VnQS81hSohbbE74qGhxk6W3as8y89Sy5PUuGQ6a0E6XAEWmHgsmNV7OP5VeYjdWAlU2SIMSu5uvbSwQpExzrJ9qKBWS0qK69XH+UWI6IRkOgF71aH6UWuoQcEs6186G45Tp1Vo4XTrT1XnwRCASGobFCSl3S0k5COd+xI3W42qSuncXTcyZVEK7CAuZtBfSfxhyR969tdMD8I+xBiNR6f/ShzMo27ersHXpUdamI2rJV/QQfdFFxwbw1jqXueCB0h6Ky22VRBfvmcLA/BVWEn7Vm7+npU/BXs9KC6FkTq1DpJZuak3AIrJlRn0Rt+9Xnyne/HgtGFS6MVyCkMVq5kgpTbMuTtkRqoBBZlicKDbYmZHcALdfwW93PYF9EZqd33Xr+pD2IkK3hrcdOOC+LLw0O1kbH9qdGMN/FH273Evpcu7UIkOevle4dtubZMHK8pKgJSr9camOPFGHw4l9CwY8VMKv1m8v0uXt3+tXEbXUIqLhWUCDqrN0WF/QJQ5imvJ3A1upNDJf4g4XEnWsGNlZDh5qi376VnAEXKRbtkdgKETcvKTuF56YcbmmZQ6Kn5p+VhNlvx3hhCPF8Vpw3Im2+Dj04wWS9bkcH5F13nxxhCPvhBJp4gmA5IpWRm6beXAqNfexY+eKupCUH0ZkcyijsiiOtjkxERpEDbCjVqhvdiYkCHJ00+pfcDtxw7Io4m1lsjTPZT+ww2B88Y/ZJ5KrCRFqEfgr4qa3y5cuNHNDGqwgpnhLU71Ni5WVws1TOlrmJ+epNSw8FSP8AfsL26GNUyJ8gUh2xTODgylOpUHSUc8tO+I13+G7Yti84Qnw8q8FgM3EsVNMVTfo5XWGCCvVjjjDsX0XcaQs1NjnyLwdawc4Y/wBUmNSlnqH8q9TkZ5vdVTYQHKCJaBiHS4oqpMMoWhYVxN+rd/11TvRxFv72xvLKxvkuTBCSXcaqJWTBQpxAEIY+JzHc8UN1seetC7E2YUuU6iZIarVzXSsCtVKddSji5RTMc2vbXAIRK8oE4gCdRe5vj10cPr09MEWzc28aWC7Vr29lFdhVTt19X8qIQp+CqTwzt7RQdEhqzri6yI1GQ3cgVjN4uxKOQIathElXrJe2hPhdSbAhLTFedGkitIsAqEkuRXhLMSN5t4bpZmfnflORMhG1p3wSQQGqm5H5k0AkI0lbz0WFKOD2cmwcFwah/wCgkpLtDHis1+xEhqjv7aX1P7GIMUlUKI2I5w0Fz0n8FxiatUkKYjEceIerNR9R9kgEby56KzMcG4NBZj4cEWzH3/FdZvUptsBWmIjdZXC2BZiXIipyof3wCsg+MPFU8AtL6UyX6Z5mfBKwwJJFMi6TX6lWTA4i0Ze2MFt9OzsYXXL5T3KYMZYYF8m+Gezzx1A3yQhj4lclFSjERsjmIBOIRb1//9k=" alt="Pic"/>
-      <h2>Leia Organa</h2>
-      <p>Princess Leia Organa was one of the greatest leaders of the Rebel Alliance, fearless on the battlefield and dedicated to ending the Empire’s tyranny. Daughter of Padmé Amidala and Anakin Skywalker, sister of Luke Skywalker, and with a soft spot for scoundrels, Leia ranked among the galaxy’s great heroes. But life under the New Republic proved difficult for her. Sidelined by a new generation of political leaders, she struck out on her own to oppose the First Order as founder of the Resistance. These setbacks in her political career were accompanied by more personal losses, which she endured with her seemingly inexhaustible will.</p>
-      <h3>Lando Calrissian</h3>
-      <p>Lando Calrissian may have come late to the fight against the Empire, but his role in destroying the second Death Star cemented his reputation as a hero. In his youth, Lando was a sportsman seeking a fortune at the sabacc tables. After he lost his beloved ship to Han Solo, Lando spent years living the high life and pursuing get-rich-quick schemes, with uneven results. He went semi-respectable as the baron administrator of Cloud City, only to be drawn into the fight against the Empire. After a personal tragedy, Lando sought solace in isolation on Pasaana, unaware that the galaxy would need him again.</p>
+      <!-- sidebar with styled text only content -->
+      <div id="sidebar">
+        <h4>Tomorrow</h4>
+        <p id="sbar">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas unde
+          consequatur enim odio accusantium aliquid molestiae obcaecati optio
+          possimus rerum facilis ipsa iste cumque labore praesentium officiis
+          est nobis deleniti, beatae sapiente vel voluptates recusandae? Illum
+          asperiores nostrum rem nemo. Saepe quibusdam aspernatur vitae hic non,
+          obcaecati rem repellat ipsa illo. Possimus quod veritatis ea optio,
+          quam blanditiis debitis omnis architecto dolores aliquam, obcaecati
+          esse iure accusamus non? Alias soluta consequatur corporis,
+          perferendis cupiditate omnis illo provident nesciunt ipsum. Eos, a
+          iure facere numquam autem commodi, cupiditate expedita magni esse
+          laudantium quidem neque nisi fuga quos modi tempore reiciendis
+          debitis.
+        </p>
+        <h4>The distant Future</h4>
+        <p id="sbar">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt,
+          molestias, voluptate perspiciatis voluptatum, eos explicabo nobis
+          nulla natus debitis odit iusto vero sapiente nihil quod velit?
+          Corporis rerum aliquam dolorem praesentium maxime libero quia, esse,
+          iure nobis quisquam, molestias dolore impedit autem optio hic tempore.
+          Culpa accusamus iure reiciendis magni exercitationem tempora nobis,
+          impedit odio non expedita eum est molestiae dolor, similique
+          laudantium, consequuntur consectetur repudiandae ipsa modi maiores
+          enim recusandae fugit. Cum soluta nostrum accusantium totam odio non
+          ullam sunt aliquam rem, iusto quia ea rerum saepe recusandae deserunt
+          dicta a, labore sapiente. Porro similique nobis ut consequuntur
+          explicabo?
+        </p>
+        <h4>The Slightly More Distant Future</h4>
+        <p id="sbar">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem eveniet
+          sequi, ullam quia aliquid nesciunt atque autem odit, ipsa aliquam
+          facere culpa temporibus eius facilis reiciendis fugiat quo saepe
+          cumque! Possimus quas hic eveniet tenetur animi cum, veritatis dolor
+          vel repudiandae corporis eum, odio deserunt voluptates eius quibusdam
+          nam maiores, veniam ea modi. Tempora a excepturi facilis obcaecati
+          quia debitis consequuntur cupiditate reiciendis, dolore ut ab ad enim
+          esse fugit repudiandae libero quae est provident et eveniet sint?
+          Veritatis tempora facilis eius impedit! Nihil et, eum velit iure alias
+          ipsa, consequatur nemo officia, illo reprehenderit voluptatum aperiam
+          esse. Eius, commodi.
+        </p>
+        <h4>The Pretty Far Future</h4>
+        <p id="sbar">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex quae
+          nobis commodi deserunt? Culpa inventore ipsum mollitia doloribus,
+          ipsam maxime est error numquam consequuntur voluptate fugit in eum
+          repellendus quis animi quia minima amet! Facere, temporibus quo neque
+          inventore quibusdam maxime molestias dolorem cupiditate libero ipsa
+          fugiat non repudiandae veritatis.
+        </p>
+        <!-- bottom of sidebar with text & image content -->
+        <h4>A Fascinating Picture</h4>
+        <img id="sbar-img" src="https://picsum.photos/100" alt="Picture 4" />
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe qui
+          rem debitis porro cupiditate pariatur quidem vitae, vero tempora
+          ratione eaque in iure rerum recusandae impedit libero quia dolore
+          asperiores nobis dolor voluptatem. Delectus non accusantium cupiditate
+          doloribus quasi id dolore saepe ipsam sapiente dolorum debitis
+          exercitationem neque sit consectetur distinctio, nam adipisci expedita
+          perspiciatis ratione facere dolorem iure doloremque blanditiis? A,
+          illo! Assumenda corporis minima repudiandae. Reprehenderit quidem,
+          corrupti culpa molestias praesentium, eveniet qui dolorum mollitia sit
+          modi aperiam vero aliquam voluptatum minus iure iusto maxime. Earum
+          asperiores sed a error temporibus totam eius omnis quae consectetur.
+          Dolore, rem deserunt quasi quibusdam cumque voluptates praesentium hic
+          ex, repellat porro eligendi veniam adipisci ratione odio! Nostrum modi
+          corrupti animi totam cupiditate porro deleniti vero minima iure. Atque
+          ullam sequi delectus illum ducimus nostrum sed inventore vitae,
+          cupiditate in. Velit quia natus consectetur harum perferendis atque
+          sit consequuntur eius ex aliquid.
+        </p>
+        <!-- button to learn more page -->
+        <a href="learn-more.html" id="button">Learn More</a>
+        <h4>The Exact Same Fascinating Picture, But Slightly Lower Down</h4>
+        <img id="sbar-img" src="https://picsum.photos/100" alt="Picture 4" />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam,
+          aliquam minus. Placeat fugit laboriosam, nisi adipisci ipsam hic
+          ratione, nobis tempora cum sint impedit excepturi rerum? Velit iure,
+          recusandae culpa sed animi accusantium rem porro quibusdam explicabo
+          corrupti aliquid fugit harum nisi error, dolore incidunt amet, placeat
+          dignissimos! Repellendus dolores ipsa unde dolorem animi ut
+          voluptates, dicta veritatis veniam quas dignissimos expedita impedit
+          porro aut maxime nam pariatur temporibus saepe error optio sapiente.
+          Consequuntur delectus doloremque nam eius sit excepturi, amet magnam
+          exercitationem obcaecati illum sint facere itaque beatae dignissimos
+          alias, minus provident molestias. Officiis soluta quae error inventore
+          maxime, voluptatem vitae possimus, excepturi tenetur magni explicabo a
+          cum. Odit magnam modi molestiae laudantium sequi illo nemo neque est
+          explicabo itaque voluptatum accusamus esse numquam dolor impedit
+          aliquam quam natus quas, ratione, porro doloribus. Delectus pariatur
+          eius accusamus quis unde beatae perspiciatis facilis saepe. Laboriosam
+          ratione perspiciatis asperiores deserunt praesentium quaerat illo vero
+          assumenda in ipsam. Laboriosam, quos! Alias temporibus doloremque
+          quidem quibusdam quaerat voluptas nisi asperiores, non ad quasi, at
+          dolor aut. Facere fugiat vero labore corrupti fugit, dolor sed porro
+          soluta harum sapiente earum aliquam eligendi exercitationem beatae
+          cumque aspernatur sunt ut provident officiis? Dolorem eius excepturi
+          adipisci!
+        </p>
+        <!-- button to learn more page -->
+        <a href="learn-more.html" id="button">Learn More</a>
       </div>
-      <div class="item footer">Footer</div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+      <!-- main content with images & text -->
+      <div id="content-1">
+        <h3>This Is A Photo With Just So Much Gibberish Underneath It</h3>
+        <img src="https://picsum.photos/600/300" alt="Picture 4" />
+        <h4>You Get A Paragraph!</h4>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas veniam
+          consequuntur fugiat quo voluptatum sit a, nam eius ab quibusdam
+          asperiores neque est quam pariatur quasi labore delectus repellat
+          totam consequatur? Rem dignissimos necessitatibus blanditiis labore
+          iusto minus maiores autem quasi corrupti itaque magnam harum,
+          accusamus mollitia! Asperiores totam quasi ut, modi, eligendi optio
+          consectetur placeat, neque rerum repudiandae repellat! Maiores,
+          laudantium nesciunt! Doloremque autem voluptates itaque cumque illum
+          vitae perspiciatis, ab modi aliquam nesciunt! Alias dignissimos
+          aspernatur commodi quisquam in, quae fuga architecto eos ipsam esse
+          atque dicta accusamus, suscipit odit dolores minus earum impedit iusto
+          labore a hic quas! Est et delectus deleniti dignissimos, assumenda
+          inventore reiciendis cumque maiores unde maxime, itaque eum illum
+          tenetur veniam sunt quas quasi quaerat placeat dolor incidunt iusto
+          nemo nesciunt doloremque nulla? Quaerat, itaque. Reiciendis iure
+          accusamus obcaecati culpa vero porro blanditiis sunt illum. Eum
+          maiores commodi officia modi voluptatibus accusamus soluta inventore
+          impedit quaerat consectetur, id aperiam, omnis rem laudantium sunt
+          eligendi necessitatibus praesentium dignissimos quo libero obcaecati
+          possimus reiciendis. Tempora eos ipsa odio magni. Aliquam!
+        </p>
+        <h4>And You Get A Paragraph!</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem
+          laboriosam ipsa natus illum velit quasi accusantium obcaecati nesciunt
+          eaque asperiores, voluptates earum accusamus, eius sapiente nulla, sed
+          dolorem soluta sequi! Tempora molestias obcaecati consequatur aut
+          accusamus saepe, impedit nesciunt necessitatibus placeat laudantium
+          ipsa nemo recusandae nam, nostrum ratione illum commodi, deserunt
+          possimus fugiat ab rerum. Corporis saepe deserunt aliquid iure
+          praesentium quidem, nam sit iste facere temporibus! Repellendus,
+          explicabo? Porro aliquid dolorem sed consectetur mollitia eum nihil,
+          odio laboriosam voluptas nobis veniam vero assumenda exercitationem
+          sequi vitae voluptatum? In, sed adipisci aliquid corporis saepe sequi
+          dolore quas alias amet eaque! Corporis magnam earum fuga eveniet
+          minima! Labore dolores nesciunt perspiciatis, omnis illum
+          exercitationem quos voluptatem error similique fuga ad ut fugiat
+          cupiditate. Incidunt amet modi impedit possimus cupiditate velit ullam
+          sit, voluptatum aperiam a, corrupti nulla optio doloremque earum
+          maiores ipsum reprehenderit laborum aut vitae ea dicta nesciunt alias
+          quo! Voluptatem atque accusamus in incidunt repellat perspiciatis
+          doloremque dolores dolorem consequuntur eos praesentium rerum quos
+          aliquid recusandae et ut porro laudantium qui optio libero deleniti,
+          voluptate laborum! Perferendis, quidem labore dolorum quasi nobis iste
+          ex vel corrupti veniam! Amet ipsum animi deserunt laborum, sapiente
+          necessitatibus quas molestias nemo consequuntur repellendus.
+        </p>
+        <h4>And You Get A Paragraph!</h4>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quae
+          nemo ab deleniti architecto omnis quod! Consequatur rerum nemo quaerat
+          omnis vitae molestiae, provident architecto dolor cumque perferendis
+          repellat illo. Error saepe reiciendis dolorum, magni dolores est eum
+          voluptatibus distinctio, ducimus a corrupti modi quasi deleniti
+          dolorem dolor vel dicta officiis maxime reprehenderit nihil
+          recusandae, autem perferendis culpa dignissimos! Soluta, iure
+          consequuntur ea explicabo laborum placeat quam praesentium maxime
+          consequatur eaque eligendi eum enim quia tenetur sint illo voluptatem
+          recusandae non corporis labore qui cumque quidem dolores quod?
+          Necessitatibus nobis hic earum doloremque voluptas optio autem,
+          quisquam id minus nemo debitis voluptate, voluptatum quam cumque at
+          accusamus iusto deleniti ab similique, facere saepe! Iusto dolorem
+          fuga facere quis maiores alias nobis vel quisquam repudiandae. Quidem
+          iste architecto fugiat dignissimos quibusdam commodi, cupiditate nam
+          provident ipsam vero laborum perferendis in minus quae, ratione
+          corporis soluta aliquid repellendus, vel repudiandae eveniet aut
+          veritatis id? Eveniet, iusto debitis. Cupiditate, voluptatum? Officia
+          amet nobis et aspernatur neque quos asperiores dolore eaque debitis
+          sequi, dicta optio, mollitia, esse odio ab minima. Atque cupiditate,
+          aliquam, ad, a eligendi non eveniet dolores mollitia repellendus
+          quibusdam consequuntur officia cumque. Labore doloremque adipisci non
+          aspernatur, necessitatibus nisi delectus exercitationem.
+        </p>
+        <h4>And You Get A Paragraph!</h4>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae
+          accusantium, praesentium odit esse sunt itaque dolore tenetur earum a?
+          Deserunt voluptate dolore dolores, hic repellendus facere doloremque
+          officiis sed in magnam voluptatem quisquam nulla laudantium molestiae
+          eligendi praesentium tenetur optio quibusdam voluptatibus ab esse
+          minima nostrum. Sed asperiores dolores saepe ut necessitatibus
+          architecto minima inventore assumenda cum autem reiciendis blanditiis
+          corrupti neque magni velit modi facilis, corporis tempore ullam. Rerum
+          fugit mollitia facere voluptatum dolorem omnis, fugiat eaque nisi
+          magnam, voluptates vitae illum iste consequuntur? Illo ipsum quasi
+          iure saepe excepturi vel, aliquam, veniam cumque perspiciatis
+          consequuntur dicta assumenda. Suscipit, tenetur, eos dolor
+          consequuntur ea aliquam sunt molestias quidem fugit illo accusantium.
+          Recusandae blanditiis culpa commodi esse minima, sunt cum assumenda
+          iure totam veritatis sapiente architecto corrupti rem quia. Facilis
+          dolore iste, adipisci cupiditate eum et molestias tempore optio
+          nesciunt dicta vel error voluptate similique delectus laborum harum
+          corporis voluptatum itaque. Cupiditate, illo incidunt laudantium enim,
+          neque, vel sapiente numquam pariatur porro non modi voluptas! Eaque
+          reiciendis eligendi quibusdam fuga expedita consectetur nulla
+          distinctio nobis non quas, impedit aperiam neque velit harum, quidem
+          minima repudiandae ipsam sint. Iusto, delectus. Quis fugiat facilis,
+          repellat suscipit nemo, ea quo tempore ipsam minus earum perspiciatis,
+          voluptatibus voluptatem. Veritatis unde officiis amet expedita fuga
+          laudantium deserunt repellat aperiam, optio modi blanditiis illo
+          necessitatibus velit consequatur quibusdam dolores quas esse
+          provident! Eius est repellat officia soluta consequatur sint libero
+          eaque velit nisi. Ipsum libero iste autem qui hic inventore officiis
+          suscipit consequatur, cum ullam consectetur!
+        </p>
+        <h4>Everyone Gets A Paragraph!</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+          libero id tempore! Pariatur corporis dignissimos temporibus voluptate.
+          Perspiciatis deserunt eveniet doloribus natus praesentium. Assumenda,
+          enim eos accusantium reprehenderit similique minus dolore officiis
+          provident fugit iusto temporibus deleniti! Alias quam rerum recusandae
+          a provident fugit ipsum minima architecto mollitia placeat magnam
+          blanditiis quod voluptatem odit saepe quos quo illum, veniam molestias
+          cum? Sunt maxime facere atque possimus voluptatibus placeat
+          consequuntur delectus aliquid quod. Laudantium aperiam dolor, eaque
+          dolorum illum soluta alias temporibus? Aliquam sunt provident hic
+          beatae? Maxime sint quae vero a provident natus eos repudiandae
+          voluptatum reprehenderit hic ducimus eum vitae molestias fuga
+          voluptate, esse adipisci quidem pariatur rem optio tempore.
+          Cupiditate, esse quaerat! Laborum rem adipisci architecto fugiat
+          aperiam odio libero voluptatibus fugit optio perferendis, minima
+          laudantium iure blanditiis saepe dicta assumenda eius nobis!
+          Voluptatibus ab aliquam, ipsum natus, placeat accusantium nam iure
+          inventore dolorum, non molestias praesentium maxime vel adipisci
+          temporibus ullam illum. Harum et reprehenderit voluptatum at tempore?
+          Explicabo, reiciendis! Nulla sed tempora ullam maxime deleniti
+          voluptate enim in debitis dignissimos ut excepturi sit ratione
+          expedita maiores, ea velit facilis labore eligendi adipisci. Eos,
+          perspiciatis dolores? Odit nulla dolor, molestias distinctio quae
+          officiis autem at amet quasi vitae deserunt. Eius architecto
+          repudiandae magni ipsum natus dolore, temporibus et quisquam? Omnis
+          eaque possimus esse vel et rem ea! Debitis consectetur ad, molestiae
+          reprehenderit amet praesentium illo voluptas a voluptatibus ab
+          pariatur incidunt nobis in dolore cumque totam voluptatum. Aperiam
+          expedita quos libero consectetur temporibus sunt sapiente numquam
+          odit, saepe voluptate exercitationem ex voluptas eaque sit enim dolore
+          quo eveniet voluptatum sequi perspiciatis asperiores adipisci
+          perferendis eligendi nisi. Facere fugit, repudiandae maiores delectus
+          tempora consequatur eveniet quod eligendi dolor qui veniam iste neque
+          beatae ab aperiam rerum, dignissimos quidem ut voluptatibus itaque
+          ullam consectetur cum dolores. Placeat, nemo quos.
+        </p>
+      </div>
+    </div>
+    <!-- footer with a submit form for name, email, message. page reloads on submit -->
+    <h2>Contact Me</h2>
+    <div class="footer">
+      <form id="form" action="/index.html">
+        <input id="name" type="text" placeholder="Name" />
+        <input id="email" type="text" placeholder="Email" />
+        <textarea id="textarea" placeholder="Message"></textarea>
+        <input type="submit" value="Submit" />
+      </form>
+      <!-- social media icons with text -->
+      <div id="social">
+        <i class="fa fa-home">Home Address: Area 51, Nevada</i>
+        <i class="fa fa-phone">Home Phone: 911</i>
+        <i class="fa fa-envelope-open-o">Email: remock@email.com</i>
+        <i class="fa fa-fax">Fax: Who uses fax?</i>
+      </div>
+    </div>
   </body>
 </html>
